@@ -8,7 +8,6 @@ buildscript {
     }
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
-//        classpath("io.spring.gradle:dependency-management-plugin:1.0.4.RELEASE")
     }
 }
 
@@ -24,7 +23,6 @@ apply plugin: 'io.spring.dependency-management'
 group 'com.jojoldu.book'
 version '1.0-SNAPSHOT'
 
-//ext['hibernate.version'] = '5.2.11.Final'
 repositories {
     mavenCentral()
 }
@@ -42,7 +40,10 @@ dependencies {
 
     compile 'org.springframework.boot:spring-boot-starter-mustache'
 
+    compile 'org.springframework.boot:spring-boot-starter-oauth2-client'
 
+    testCompile 'org.springframework.security:spring-security-test'
+    implementation 'org.springframework.session:spring-session-jdbc'
 
 }
 
